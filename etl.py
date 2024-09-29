@@ -1,4 +1,4 @@
-from models import engine
+from models import get_engine
 import pandas as pd
 
 CSV_FILE_PATH = 'files/retail_15_01_2022.csv'
@@ -23,6 +23,7 @@ def transform(df):
 
 def load(df):
     # Save the DataFrame to the database
+    engine = get_engine('retail_conanguy')
     df.to_sql('transactions', engine, if_exists='append', index=False)
 
 if __name__ == '__main__':

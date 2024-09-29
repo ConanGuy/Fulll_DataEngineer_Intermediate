@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine, BigInteger, Column, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 
-# Création d'un moteur pour la base de données SQLite
-engine = create_engine('sqlite:///databases/retail_conanguy.db') 
 Base = declarative_base()
+
+def get_engine(db: str):
+    return create_engine(f'sqlite:///databases/{db}.db')
 
 # Définition des classes de l'ORM
 class Transaction(Base):
@@ -18,5 +19,6 @@ class Transaction(Base):
     
 if __name__ == '__main__':
     # Drop the table if it already exists
+    engine = get_engine('retail_conanguy')
     Transaction.__table__.drop(engine, checkfirst=True)
     Base.metadata.create_all(engine)
