@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, BigInteger, Column, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 
 # Création d'un moteur pour la base de données SQLite
-engine = create_engine('sqlite:///retail_conanguy.db') 
+engine = create_engine('sqlite:///databases/retail_conanguy.db') 
 Base = declarative_base()
 
 # Définition des classes de l'ORM

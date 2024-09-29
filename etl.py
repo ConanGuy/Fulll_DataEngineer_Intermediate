@@ -1,7 +1,7 @@
 from models import engine
 import pandas as pd
 
-CSV_FILE_PATH = 'retail_15_01_2022.csv'
+CSV_FILE_PATH = 'files/retail_15_01_2022.csv'
 
 def extract():
     # Load the CSV file into a DataFrame
