@@ -8,6 +8,6 @@ You will find the implementation of the ETL workflow inside the file [etl.py](ht
 
 You will find the implementation of the SQL queries inside the folder [queries](https://github.com/ConanGuy/Fulll_DataEngineer_Intermediate/tree/master/queries).
 
-## Implementation of ETL workflow
+## Deployment
 
 As I'm not an expert about pipelines and coding environment, I prefer to skip this part. I think it will be more convenient to talk about my experiences and what I know about deployment directly during a future interview.
